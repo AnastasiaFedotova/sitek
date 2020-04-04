@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url(../../fonts/Fira_Sans/FiraSans-Regular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: "Fira Sans Italic";
+    src: url(../../fonts/Fira_Sans/FiraSans-Italic.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: "Fira Sans Bold";
+    src: url(../../fonts/Fira_Sans/FiraSans-Bold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: "Fira Sans Bold Italic";
+    src: url(../../fonts/Fira_Sans/FiraSans-BoldItalic.ttf) format("truetype")
+}
+
+$font_basic_title: "Fira Sans Bold", Helvetica, Arial, sans-serif;
+$font_basic_title_italic: "Fira Sans Bold Italic", Helvetica, Arial, sans-serif;
+$font_basic_text: "Fira Sans", Arial, sans-serif;
+$font_basic_text_italic: "Fira Sans Italic", Georgia, Times, serif;
