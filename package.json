@@ -1,0 +1,30 @@
+{
+  "name": "sitek",
+  "version": "0.0.1",
+  "main": "gulpfile.js",
+  "scripts": {
+    "buildCSS": "sass src/scss/style.scss:public/css/main.css",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "anastasiaFS",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "swiper": "^5.3.6"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.22.12"
+  },
+  "description": "testing project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiaFedotova/sitek.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnastasiaFedotova/sitek/issues"
+  },
+  "homepage": "https://github.com/AnastasiaFedotova/sitek#readme"
+}
