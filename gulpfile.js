@@ -1,10 +1,27 @@
 'use strict'
 
-let sass = require("gulp-sass");
+const gulp = require("gulp"),
+      sass = require("gulp-sass"),
+      concat = require("gulp-concat"),
+      autoprefixer = require('gulp-autoprefixer');
 
-gulp.task("scss", function() {
-    gulp.src("sourse-files")
+let css = function(done) {
+    gulp.src("src/scss/main.scss")
         .pipe(sass())
-        .pipe(gulp.dest("destination"))
-})
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 4 versions']
+        }))
+        .pipe(gulp.dest("dist/css/"));
+    done();
+};
 
+let js = function(done) {
+    gulp.src("src/js/libs/*.js")
+        .pipe(concat("main.js"))
+        .pipe(gulp.dest("dist/js/"));
+    done();
+};
+
+exports.build = gulp.series(css, js);
+
+gulp.watch("src/scss/**/*.scss", exports.build);
