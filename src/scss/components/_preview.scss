@@ -1,0 +1,60 @@
+.preview {
+    position: relative;
+    margin-top: 90px;
+    .preview__item {
+        margin-left: 25px;
+        padding-bottom: 19px;
+        display: block;
+        width: 230px;
+        &::before {
+            content: url(../images/icon.png);
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 14px;
+            height: 10px;
+        }
+
+        .preview__type {
+            font-family: $font_basic_title;
+        }
+    }
+
+    .preview__description {
+        margin: 0 0 23px 0;
+        font-family: $font_basic_title;
+        font-size: 18px;
+    }
+
+    .preview__video {
+        position: absolute;
+        top: 90px;
+        left: 290px;
+        &::before {
+            @include videoOverlay;
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 230px;
+        }
+
+        video {
+        }
+    }
+
+    @media (min-width: 839px) and  (max-width: 1199px) {
+        margin-left: 10%;
+        .preview__video {
+            display: none;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 838px) {
+        .preview__video {
+            display: none;
+        }
+        .preview {
+            position: relative;
+            left: -23%;
+        }
+    }   
+}

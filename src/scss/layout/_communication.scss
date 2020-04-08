@@ -1,0 +1,28 @@
+.communication-methods {
+    margin-bottom: 40px;
+    padding: 60px 135px 40px 135px;
+    height: 823px;
+    background-color: $color-background-light;
+    .communication-methods__title {
+        margin: 0 auto 59px auto;
+        font-size: 26px;
+        font-family: $font_basic_title;
+        text-align: center;
+    }
+    @media screen and (min-width:768px) and (max-width:1439px) {
+        margin-bottom: 0;
+        padding: 60px 0 40px 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+        padding: 0;
+        .communication-nav {
+            width: 100%;
+        }
+        .nav-link {
+            font-size: 10px;
+            line-height: 2;
+        }
+    }
+}

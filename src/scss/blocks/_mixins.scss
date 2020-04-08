@@ -1,0 +1,26 @@
+@mixin button-slider {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+}
+
+@mixin decorative-separator {
+    content: '';
+    margin: 15px;
+    border-left: 1px solid $color-decorative-line;
+    overflow: hidden;
+}
+
+@mixin videoOverlay {
+    background: url("../images/playplay.png") center no-repeat;
+    background-color: $color-base-button;
+    opacity: 0.7;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@mixin rounding {
+    border: 1px solid rgba(128, 128, 128, 0.105);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 0px $color-background-light;
+}

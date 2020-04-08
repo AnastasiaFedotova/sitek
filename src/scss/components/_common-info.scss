@@ -1,0 +1,160 @@
+.common-info {
+    transition: 0.5 ease;
+    margin-bottom: 20px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: 325px;
+        width: 67%;
+        height: 1px;
+        background-color: $color-decorative-line;
+
+    }
+
+    &.common-info_footer {
+        display: inline-block;
+        margin-right: 55px;
+        &::after {
+            content: none;
+        }
+    }
+
+    .logo {
+        &.logo_header {
+            .logo__img {
+                width: 79px;
+                height: 92px;
+            }
+        }
+        &.logo_footer {
+            .logo__img {
+                width: 116px;
+                height: 136px;
+            }
+        }
+    }
+
+    .lang__item {
+        cursor: pointer;
+        &:hover {
+            color: $color-text-gray;
+        }
+
+        &:first-child::after {
+            @include decorative-separator;
+            margin: 0 5px 0 9px;
+        }
+
+        input {
+            display: none;
+        }
+    }
+
+    .prices {
+        color: $color-text-gray;
+        
+        select {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        &::after {
+            content: " ";
+            position: relative;
+            bottom: 4px;
+            left: 63px;
+            display: block;
+            width: 28px;
+            border-bottom: 1px solid #333333;
+          }
+    }
+
+    .contacts {
+        position: relative;
+        display: flex;
+        margin-bottom: 0px;
+        .contacts__item {
+            padding-bottom: 6px;
+            margin: 8px 20px 0 0;
+            .contacts__country,
+            .contacts__description {
+                color: $color-text-gray;
+            }
+
+            .contacts__tel {
+                font-family: $font_basic_title;
+            }
+
+            .contacts__description {
+                position: absolute;
+                top: 25px;
+                right: 172px;
+                font-size: 14px;
+            }
+        }
+        .btn.btn_consultation {
+            position: relative;
+            top: 5px;
+            width: 152px;
+            height: 46px;
+            border-radius: 5px;
+            color: $color-base-white;
+            background-color: $color-base-button;
+            &:hover {
+                background-color: $color-link-hover;
+            }
+        }
+    }
+
+    @media screen and (min-width:1200px) and (max-width:1439px) {
+        &::after {
+            left: 22%;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        &.common-info_footer {
+            display: none;
+        }
+    }
+    @media screen and (min-width:1460px) and (max-width:1700px) {
+        &::after {
+            left: 22%;
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        &.common-info_footer {
+            .logo {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width: 1150px){
+        & > ul li:nth-child(2) {
+            display: none;
+        }
+    }
+    @media (max-width: 768px){
+        justify-content: center;
+        margin: 5% auto; 
+        & > div {
+            display: block;
+        }
+        & > div:nth-child(2),
+        & > ul li:nth-child(1),
+        & > ul li:nth-child(2) {
+            display: none;
+        }
+        & > div:nth-child(3) {
+            visibility: hidden;
+        }
+        &::after {
+            content: none;
+        }
+    }
+}

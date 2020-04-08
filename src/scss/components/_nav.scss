@@ -1,0 +1,230 @@
+.communication-nav {
+    background-color: $color-base-white;
+    height: 632px;
+    @include rounding;
+    .nav.nav-pills.mb-3 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        height: 68px;
+        background-color: $color-slide-nav;
+
+        .nav-item {
+            width: calc(100% / 5);
+            font-size: 20px;
+            text-align: center;
+            line-height: 3;
+            overflow: hidden;
+            &:nth-child(2),
+            &:nth-child(5) {
+                width: calc(100% / 6);
+            }
+            &:nth-child(3) {
+                width: calc(100% / 4);
+            }
+            .nav-link {
+                height: 68px;
+                &,
+                & > span {
+                    padding-right: 14px;
+                    font-family: $font_basic_title;
+                    color: $color-item-slider;
+                }
+
+                &.active {
+                    background-color: $color-base-button;
+                    color: $color-base-white;
+                    span {
+                        color: $color-base-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        position: relative;
+        margin: 20px;
+        .communication-slider {
+            position: absolute;
+            left: 500px;
+            display: inline-block;
+            @media (max-width:886px) {
+                display: none;
+            }
+            @media (min-width:886px) and (max-width: 1199px) {
+                left: 60%;
+            }
+
+            .carousel.slide {
+                margin-top: 5%;
+                width: 560px;
+                height: 396px;
+                .carousel-inner::after {
+                    content: none;
+                }
+                .carousel-control-next {
+                    left: 565px;
+                }
+                .carousel-control-next-icon,
+                .carousel-control-prev-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @media screen and (min-width:886px) and (max-width:1200px) {
+                    width: auto;
+                    .carousel-control-prev {
+                        left: -50px;
+                    }
+                    .carousel-control-next {
+                        left: 293px;
+                    }                    
+                }
+            }
+            .carousel-item {
+                display: flex;
+                .card {
+                    width: 270px;
+                    height: 396px;
+                    border: 0;
+                    box-shadow: 1px 1px 8px 1px $color-background-light;
+
+                    @media screen and (min-width:887px) and (max-width:1200px) {
+                        &:nth-child(1) {
+                            display: none;
+                        }
+                    }
+
+                     @media screen and (min-width:0px) and (max-width:886px) {
+                        display: none;
+                     }
+
+                    &:nth-child(1) {
+                        margin-right: 10px;
+                    }
+
+                    .card-title {
+                        font-size: 16px;
+                        font-family: $font_basic_title;
+                    }
+
+                    .card-text {
+                        font-size: 14px;
+                        font-family: $font_basic_text_italic;
+                    }
+
+                    .btn {
+                        margin-bottom: 6px;
+                        padding: 6px;
+                        height: 26px;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 1;
+                        &.btn-primary {
+                            background-color: $color-button-card;
+                            color: $color-base-button;
+                        }
+
+                        &.btn_blue {
+                            background-color: $color-button-blue;
+                            color: $color-button-blue-text;
+                        }
+
+                        &.btn_yellow {
+                            background-color: $color-button-yellow;
+                            color: $color-button-yellow-text;
+                        }
+                    }
+                    
+                    .card-img-top {
+                        height: 180px;
+                        background: url("../images/cover.png") center no-repeat, url("../images/Vector (1).png") 20px 20px no-repeat, $color-base-card;
+                    }
+                }
+            }
+        }
+
+        .memo {
+            display: inline-block;
+            margin-top: 50px;
+            width: 412px;
+            font-size: 16px;
+            text-align: center;
+            span {
+                color: $color-text-gray;
+                font-family: $font_basic_text_italic;
+            }
+
+            .btn.btn_memo {
+                @include rounding;
+                width: 152px;
+                height: 46px;
+                font-family: $font_basic_title;
+                color: $color-base-button;
+            }
+            @media (min-width: 768px) and (max-width:886px) {
+                width: 100%;
+                p {
+                    width: 50%;
+                    margin: 1% auto;
+                }
+            }
+        }
+    }
+    @media screen and (min-width:1200px) and (max-width:1303px) {
+        .communication-slider {
+            margin-left: 3%;
+            margin-top: 4%;
+        }
+    }
+
+
+    @media screen and (min-width:1250px) and (max-width:1439px) {        
+        .memo {
+            margin-top: 0 !important;
+        }
+        .communication-slider {
+            margin-left: 3%;
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (min-width:1250px) and (max-width:1366px) {
+        .tab-content {
+            margin: 5%;
+        }
+    }
+
+    @media screen and (min-width:1304px) and (max-width:1439px) {
+        .memo {
+            margin-top: 3% !important;
+        }
+        .communication-slider {
+            margin-left: 10%;
+        }
+
+    }
+    @media screen and (min-width:1367px) and (max-width:1439px) {
+        .tab-content {
+            margin: 2% 5%;
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1000px) {
+        .nav-item {
+            font-size: 16px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .memo {
+            margin: 0 0 0 3% !important;
+            .memo__content {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

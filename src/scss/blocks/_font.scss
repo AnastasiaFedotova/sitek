@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Fira Sans";
-    src: url(../../fonts/Fira_Sans/FiraSans-Regular.ttf) format("truetype")
+    src: url(../../src/fonts/Fira_Sans/FiraSans-Regular.ttf) format("truetype")
 }
 
 @font-face {
     font-family: "Fira Sans Italic";
-    src: url(../../fonts/Fira_Sans/FiraSans-Italic.ttf) format("truetype")
+    src: url(../../src/fonts/Fira_Sans/FiraSans-Italic.ttf) format("truetype")
 }
 
 @font-face {
     font-family: "Fira Sans Bold";
-    src: url(../../fonts/Fira_Sans/FiraSans-Bold.ttf) format("truetype")
+    src: url(../../src/fonts/Fira_Sans/FiraSans-Bold.ttf) format("truetype")
 }
 
 @font-face {
     font-family: "Fira Sans Bold Italic";
-    src: url(../../fonts/Fira_Sans/FiraSans-BoldItalic.ttf) format("truetype")
+    src: url(../../src/fonts/Fira_Sans/FiraSans-BoldItalic.ttf) format("truetype")
 }
 
 $font_basic_title: "Fira Sans Bold", Helvetica, Arial, sans-serif;

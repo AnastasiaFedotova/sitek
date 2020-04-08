@@ -1,0 +1,13 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 130px 50px 150px;
+    background: url("../images/Rectangle 20.png") 150px 480px no-repeat, url("../images/Rectangle 23.png") 0px 745px no-repeat;
+    @media screen and (min-width:1200px) and (max-width:1439px) {
+        padding: 50px 7%;
+        background: url("../images/Rectangle 20.png") 9% 480px no-repeat, url("../images/Rectangle 23.png") 0px 745px no-repeat;
+     }
+     @media (max-width: 768px) {
+         padding: 2% 2%;
+     }
+}

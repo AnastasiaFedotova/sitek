@@ -1,0 +1,170 @@
+.header-menu {
+    * {
+        font-family: $font_basic_title;
+        transition: 0.5s ease;
+    }
+
+    @media screen and (min-width:850px) and (max-width: 1150px){
+        justify-content: center;
+    }
+
+    & > .header-menu__title {
+        display: inline-block;
+        margin-bottom: 0;
+        width: 300px;
+        height: 100%;
+        font-size: 26px;
+        @media screen and (min-width:1314px) and (max-width: 1439px) {
+            width: 250px;
+        }
+        @media screen and (min-width:1200px) and (max-width:1313px) {
+            width: 130px;
+        }
+        @media screen and (min-width:768px) and (max-width: 1150px){
+            display: none;
+        }
+    }
+
+    &.header-menu_footer {
+        position: relative;
+        top: -50px;
+        display: inline-flex;
+        padding-bottom: 10px; 
+        border-bottom: 1px solid $color-decorative-line; 
+        & > ul,
+        ul li {
+            display: inline-block;
+        }
+
+        ul {
+            margin-left: 50px;
+        }
+
+        .header-menu__complect {
+            color: $color-text-gray;
+            transform: none !important;
+        }
+
+        .contacts {
+            text-align: end;
+            .contacts__item {
+                display: block;
+                margin: 0;
+                .contacts__tel {
+                    font-family: $font_basic_title;
+                    font-size: 20px;
+                    color: $color-base-text;
+                    transform: none !important;
+                }
+
+                .contacts__country {
+                    color: $color-text-gray;
+                    font-size: 14px;
+                }
+            }
+
+            li:first-child::after {
+                content: none;
+            }
+        }
+        @media screen and (min-width:1200px) and (max-width:1439px) {
+          justify-content: space-between;
+          top: -20px;
+          width: 100%;
+        }
+
+        @media (max-width: 1199px) and (min-width: 768px)  {
+            width: 100%;
+
+            .address {
+                top: -10px;
+                width: 100%;
+                background-color: $color-base-footer;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .header-menu__title,
+            & > ul {
+                display: none;
+            }
+        }
+
+        @media (max-width: 986px) {
+            .address {
+                top: -10px;
+                margin: auto;
+                width: 100%;
+                background-color: $color-background-light;
+                .address__location,
+                .address__mail {
+                    display: none;
+                }
+
+                .address__social {
+                    margin: auto;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    a:hover,
+    a:active {
+        color: $color-base-button;
+        text-decoration: none;
+    }
+
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+        margin-bottom: 0;
+        li {
+            font-size: 16px;
+            @media screen and (min-width:768px) and (max-width: 1150px){
+                font-size: 14px;
+            }
+            @media screen and (min-width:768px) and (max-width: 850px){
+                img {
+                    display: none;
+                }
+            }
+
+            &:first-child::after {
+                @include decorative-separator;
+            }
+
+            &:nth-child(3) a {
+                margin: 0 120px 0 40px;
+                color: $color-text-gray;
+                &:hover,
+                &:active {
+                    color: $color-base-button;
+                    text-decoration: none;
+                }
+            }
+
+            &:last-child {
+                margin-left: 20px;
+                a {
+                    margin: 0 5px;
+                    color: $color-base-button;
+                    &:hover,
+                    &:active {
+                        display: inline-block;
+                        text-decoration: none;
+                        transform: scale(1.05, 1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        display: none;
+    }
+}

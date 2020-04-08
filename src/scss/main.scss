@@ -1,5 +1,6 @@
-@import 'core/_core';
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../node_modules/swiper/css/swiper.min.css';
+@import '../../node_modules/swiper/css/swiper.css';
 @import 'blocks/_blocks';
-@import 'elements/_elements';
 @import 'layout/_layout';
-@import 'pages/_pages';
+@import 'components/_components';

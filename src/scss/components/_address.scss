@@ -1,0 +1,49 @@
+.address {
+    position: absolute;
+    top: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 960.81px;
+    @media screen and (min-width:1200px) and (max-width:1439px) {
+        width: 100%;
+    }
+    .address__location {
+        font-family: $font_basic_text;
+        width: 290px;
+        span:last-child {
+            font-family: $font_basic_text;
+        }
+    }
+
+    .address__mail {
+        p {
+            font-family: $font_basic_text;
+            margin-right: 50px;
+            &:first-child {
+                margin-bottom: 40px; 
+            }
+            a:last-child {
+                color: $color-text-gray;
+                font-family: $font_basic_text;
+            }
+        }
+    }
+
+    .address__social {
+        margin-top: 25px;
+        text-align: end;
+       ul {
+            display: flex;
+            justify-content: space-between;
+            width: 245.33px;
+       }
+
+       span {
+            display: inline-block;
+            margin-top: 67px;
+            font-family: $font_basic_text;
+            color: $color-text-gray;
+       }
+    }
+}

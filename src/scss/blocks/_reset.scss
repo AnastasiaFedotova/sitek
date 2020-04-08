@@ -1,0 +1,49 @@
+body {
+    margin: 0 auto;
+    width: 1440px;
+    height: 100%;
+    *, 
+    a {
+        font-family: $font_basic_text;
+        color: $color-base-text;
+    }
+    & > *  {
+        width: 1440px;
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1439px) {
+        width: 100%;
+        & > *  {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    @media screen and (min-width:1500px) and (max-width:1700px) {
+        width: 100%;
+        & > header,
+        & > footer  {
+            background-size: cover;
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 100%;
+        & > header,
+        & > footer  {
+            background-size: cover;
+        }
+    }
+
+    @media (max-width: 768px){
+        width: 100%;
+        & > header,
+        & > main,
+        & > footer  {
+            width: 100%;
+            background-size: cover;
+        }
+    }
+}

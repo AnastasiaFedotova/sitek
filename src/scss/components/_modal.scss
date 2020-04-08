@@ -1,0 +1,12 @@
+.modal {
+    .modal-body {
+        form {
+            *:invalid {
+                border: 1px solid $color-modal-warning;
+            }
+            .input-group {
+                margin: 20px 0;
+            }
+        }
+    }
+}

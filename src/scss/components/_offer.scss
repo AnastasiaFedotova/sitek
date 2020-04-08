@@ -1,0 +1,22 @@
+.offer {
+    margin: 80px 0 60px 0; 
+    width: 100%;
+    .offer__title {
+        margin: 0 auto;
+        width: 552px;
+        font-family: $font_basic_title;
+        font-size: 42px;
+        line-height: 140%;
+        letter-spacing: 3px;
+        color: $color-text-gray;
+        text-align: center;
+    }
+    @media (min-width: 883px) and (max-width: 1098px) {
+        position: relative;
+        left: -30%;
+    }
+    @media (max-width: 883px) {
+        position: relative;
+        left: -40%;
+    }
+}
